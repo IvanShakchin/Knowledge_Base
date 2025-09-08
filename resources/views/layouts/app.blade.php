@@ -3,7 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Knowledge Base')</title>
+    <title>@yield('title', 'База знаний')</title>
+    <!-- Подключение иконок и манифеста -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('images/site.webmanifest') }}">
+    <link rel="mask-icon" href="{{ asset('images/safari-pinned-tab.svg') }}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Дополнительные иконки для Android -->
+    <link rel="icon" href="{{ asset('images/android-chrome-192x192.png') }}" sizes="192x192">
+    <link rel="icon" href="{{ asset('images/android-chrome-512x512.png') }}" sizes="512x512"> 
+    <!-- Основной фавикон -->
+    <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -329,9 +343,9 @@
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="{{ route('home') }}">
-                <i class="fas fa-book-open me-2"></i>
+                <img src="{{ asset('images/logo.png') }}" alt="Логотип" class="me-2" style="height: 30px;">
                 <span>База знаний</span>
-            </a>
+            </a>    
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="border: #cfcfcf solid 1px;">
                 <span class="navbar-toggler-icon"></span>
             </button>
