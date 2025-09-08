@@ -209,15 +209,18 @@
 #### ]);
 
 ### Установлен Laravel Breeze для аутентификации
+
 - composer require laravel/breeze --dev
 - php artisan breeze:install blade
 - php artisan migrate
 
 ### Установлен пакетов для работы с текстом
+
 - composer require intervention/image
 - composer require league/commonmark
 
 ### Установлен Scout для поиска
+
 - composer require laravel/scout
 - composer require meilisearch/meilisearch-php guzzlehttp/guzzle http-interop/http-factory-guzzle:^1.0
 - php artisan vendor:publish --provider="Laravel\Scout\ScoutServiceProvider"
