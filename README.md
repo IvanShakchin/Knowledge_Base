@@ -196,12 +196,28 @@
 
 ---
 
-В случае возникновения вопросов или проблем, обращайтесь к системному администратору.
-
 ## Для программиста при установке программы
-### Перед запуском миграцииphp artisan migrate
 
 ### в файле /database/seeders/DatabaseSeeder.php прописываем данные для первого супер пользователя 
-- // Создаем суперпользователя 
-User::create([ 'name' => 'Super Admin','email' => 'admin@example.com', 'password' => bcrypt('password'), 'is_approved' => true, 'role' => 'superadmin', 
--]);
+- Создаем суперпользователя 
+#### User::create([ 
+####  'name' => 'Super Admin',
+####  'email' => 'admin@example.com', 
+####  'password' => bcrypt('password'), 
+####  'is_approved' => true, 
+####  'role' => 'superadmin', 
+#### ]);
+
+### Установлен Laravel Breeze для аутентификации
+- composer require laravel/breeze --dev
+- php artisan breeze:install blade
+- php artisan migrate
+
+### Установлен пакетов для работы с текстом
+- composer require intervention/image
+- composer require league/commonmark
+
+### Установлен Scout для поиска
+- composer require laravel/scout
+- composer require meilisearch/meilisearch-php guzzlehttp/guzzle http-interop/http-factory-guzzle:^1.0
+- php artisan vendor:publish --provider="Laravel\Scout\ScoutServiceProvider"
